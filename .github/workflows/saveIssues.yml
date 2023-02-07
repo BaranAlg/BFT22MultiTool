@@ -1,0 +1,43 @@
+name: Backup Issues and Milestones
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GSO_TOKEN_INTERNAL }}
+
+    steps:
+    
+      - if: ${{ env.super_secret != '' }}
+        run: echo 'This step will only run if the secret has a value set.'
+      - if: ${{ env.super_secret == '' }}
+        run: echo 'This step will only run if the secret does not have a value set.'
+
+      
+      - name: Debug working directory
+        run: |
+          ls -al
+      
+      - name: Check Token
+        run: |
+          curl -I "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/GSO-SW
+  
+         
+      - name: Checkout repository
+        uses: actions/checkout@v2
+    
+      - name: Backup Issues and Milestones
+        run: |
+          curl -H "Authorization: token ${GITHUB_TOKEN}" \
+               https://api.github.com/repos/${{ github.repository }}/issues?state=all \
+               > issues.json || echo "issues.json not found"
+          curl -H "Authorization: token ${GITHUB_TOKEN}" \
+               https://api.github.com/repos/${{ github.repository }}/milestones?state=all \
+               > milestones.json || echo "milestones.json not found"
+
+
+    
+

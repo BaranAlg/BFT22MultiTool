@@ -1,0 +1,13 @@
+ name: Github Issue Copier
+  # You may pin to the exact commit or the version.
+  #uses: soichisumi/issue-copy-action@0da68355f63b8318c7a93d0cecd4578909544bda
+  uses: soichisumi/issue-copy-action@v0.2.0
+  with:
+    # Github token
+    githubToken: ${{ secrets.GITHUB_TOKEN }}
+    # Repository to which generated issue is copied. format: $OWNER/$REPO_NAME
+    targetRepository: GSO-SW/MultiTool
+    # Keyword to trigger this action. The action is executed in the case of lowercased issue comment matched with lowercased keyword.
+    keyword: /copy"
+    # Content of newly created issue
+    contentOfNewIssue: 'prefix of newly created issue'
