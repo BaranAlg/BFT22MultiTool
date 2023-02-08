@@ -23,7 +23,7 @@ Die Einhaltung der Anforderungen wird bei der Bewertung der Teilprogramme geprü
 |----------|----------|----------|
 |Programmiert in C#|Programm und einzelne Optionen sind beliebig oft wiederholbar.|Alle gesetzlichen vorgaben werden eingehalten.|
 |Konsolenanwendung|Eine Fehleingabe führt zu einer erneuten Eingabeaufforderung.|Moralische und ethische Grundsätze sind einzuhalten.|
-|.NET 5 |Eingabeaufforderungen können ohne gültige Eingabe verlassen werden. |-|
+|.NET 6 |Eingabeaufforderungen können ohne gültige Eingabe verlassen werden. |-|
 |Alle Features und Menüs sind in der Klassenbibliothek zu erstellen|Das Programm kann in jederzeit beendet werden.|-|
 |-|Alle Eingaben werden über die Tastatur gemacht.|-|
 |-|Die Konsole wird beim Verlassen des aktuellen Moduls gelöscht.|-|
