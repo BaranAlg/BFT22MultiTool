@@ -46,11 +46,11 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |                   |           |Entwickler       |         |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
-|**Physik**	        |Menü PY 	  |Teamkoordinator  |         |PHEntwicklung	,Feature6|
-|		                |           |Entwickler	      |         |Feature7              |		
-|		                |	          |Entwickler	      |         |Feature8              |
-|		                |           |Entwickler	      |         |Feature9              |
-|		                |           |Entwickler       |         |Feature10             |		
+|**Physik**	        |Menü PY 	  |Teamkoordinator  |x10Lukas         |PHEntwicklung	,Feature6|
+|		                |           |Entwickler	      |LeutnantRabe         |Feature7              |		
+|		                |	          |Entwickler	      |KhalidSmoqy         |Feature8              |
+|		                |           |Entwickler	      |lorenormert4242         |Feature9              |
+|		                |           |Entwickler       |LeonDE         |Feature10             |		
 |		                |	          |                 |         |                      |				
 |**Informatik**	    |Menü IT , Fake Taskmanager   |Teamkoordinator  |     ArthurDyga    |ITEntwicklung,Feature11|				
 |		                |	 video/foto/ und audio rechner         |Entwickler       |		 ayoubcgn     |Feature12             |		
