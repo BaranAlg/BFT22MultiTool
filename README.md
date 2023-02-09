@@ -101,11 +101,11 @@ Alle Teamkoordinatoren müssen eine neue Klassenbibliothek für ihren Bereich er
 
 |Bereich|Name der Klassenbibliothek|Untermenü Klassenname/Dateiname|Methodenbezeichnung|
 | ----------- 	| ----------- 	| ----------- 	| ----------- 	|
-| Elektrotechnik | ETFragBFTKlassenBibliothek|ETMenue/ETMenue.cs|ETSubMenue|
-| Informatik|ITFragBFTKlassenBibliothek |ITMenue/ITMenue.cs|ITSubMenue|
-| Mathematik  |MAFragBFTKlassenBibliothek |MAMenue.cs/MAMenue|MASubMenue|
-|Physik|PHFragBFTKlassenBibliothek|PHMenue/PHMenue.cs|PHSubMenue|
-|Wirtschaft|WIFragBFTKlassenBibliothek|WIMenue/WIMenue.cs|WISubMenue|
+| Elektrotechnik | ETBFTKlassenBibliothek|ETMenue/ETMenue.cs|ETSubMenue|
+| Informatik|ITBFTKlassenBibliothek |ITMenue/ITMenue.cs|ITSubMenue|
+| Mathematik  |MABFTKlassenBibliothek |MAMenue.cs/MAMenue|MASubMenue|
+|Physik|PHBFTKlassenBibliothek|PHMenue/PHMenue.cs|PHSubMenue|
+|Wirtschaft|WIBFTKlassenBibliothek|WIMenue/WIMenue.cs|WISubMenue|
 
 Die jeweiligen Bereiche und Ihre Mitglieder erstellen und verändern nur Dateien in ihren **eigenen** Klassenbibliotheken. ⚠️ 
 
