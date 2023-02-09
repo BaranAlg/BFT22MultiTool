@@ -47,9 +47,9 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
 |**Physik**	        |Menü PY 	  |Teamkoordinator  |x10Lukas         |PHEntwicklung	,Feature6|
-|		                |           |Entwickler	      |LeutnantRabe         |Feature7              |		
-|		                |	          |Entwickler	      |KhalidSmoqy         |Feature8              |
-|		                |           |Entwickler	      |lorenormert4242         |Feature9              |
+|		                |Schwerkraft           |Entwickler	      |LeutnantRabe         |Feature7              |		
+|		                |Infos Aufbau	          |Entwickler	      |KhalidSmoqy         |Feature8              |
+|		                |Volumen           |Entwickler	      |lorenormert4242         |Feature9              |
 |		                |           |Entwickler       |LeonDE         |Feature10             |		
 |		                |	          |                 |         |                      |				
 |**Informatik**	    |Menü IT , Fake Taskmanager   |Teamkoordinator  |     ArthurDyga    |ITEntwicklung,Feature11|				
