@@ -52,11 +52,11 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |           |Entwickler	      |         |Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
-|**Informatik**	    |Menü IT    |Teamkoordinator  |         |ITEntwicklung,Feature11|				
-|		                |	          |Entwickler       |		      |Feature12             |		
-|		                |	          |Entwickler       |         |Feature13             |	
-|		                |	          |Entwickler       |  	      |Feature14             |			
-|		                |	          |Entwickler       |         |Feature15             |			
+|**Informatik**	    |Menü IT , Fake Taskmanager   |Teamkoordinator  |     ArthurDyga    |ITEntwicklung,Feature11|				
+|		                |	 video/foto/ und audio rechner         |Entwickler       |		 ayoubcgn     |Feature12             |		
+|		                |	 datai pfad ausgabe         |Entwickler       |      milchschnittyy   |Feature13             |	
+|		                |	 passender ram/ bandbreite ausrechnen         |Entwickler       |  	   st3ch3rcl4n   |Feature14             |			
+|		                |	 bits und byte umrechner         |Entwickler       |      Pablo202212   |Feature15             |			
 |		                |	          |	                |		      |		                   |				
 |**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	        |WIEntwicklung,Feature16|				
 |		                |           |Entwickler       |         |Feature17             |		
