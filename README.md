@@ -64,11 +64,11 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	          |Entwickler       |         |Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
-|**Mathematik**	    |Menü MT    |Teamkoordinator  |         |MAEntwicklung,Feature21|				
-|		                |           |Entwickler       |         |Feature22             |		
-|		                |           |Entwickler       |         |Feature23             |		
-|		                |           |Entwickler       |  	      |Feature24             |
-|		                |           |Entwickler	      |       	|Feature25             |
+|**Mathematik**	    |Menü MT    |Teamkoordinator  |NihatArtan |MAEntwicklung,Feature21|				
+|		                |Flächenberechnung           |Entwickler       |NicoGeno   |Feature22             |		
+|		                |Quadratische Funktion           |Entwickler       |Timsolo0408|Feature23             |		
+|		                |Lineare Funktion           |Entwickler       |Okan       |Feature24             |
+|		                |           |Entwickler	      |          	|Feature25             |
 
 
 ---
