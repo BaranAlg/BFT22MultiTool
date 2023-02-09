@@ -58,10 +58,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	 passender ram/ bandbreite ausrechnen         |Entwickler       |  	   st3ch3rcl4n   |Feature14             |			
 |		                |	 bits und byte umrechner         |Entwickler       |      Pablo202212   |Feature15             |			
 |		                |	          |	                |		      |		                   |				
-|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	        |WIEntwicklung,Feature16|				
-|		                |           |Entwickler       |         |Feature17             |		
-|		                |	          |Entwickler       |		      |Feature18             |		
-|		                |	          |Entwickler       |         |Feature19             |	
+|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	HasanYavuz03        |WIEntwicklung,Feature16|				
+|		                |Versicherungs Rechner           |Entwickler       |BaranAlg         |Feature17             |		
+|		                |	          |Entwickler       |ismocgn7		      |Feature18             |		
+|		                |Gehalts Rechner	          |Entwickler       |Key20030        |Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
 |**Mathematik**	    |Menü MT    |Teamkoordinator  |NihatArtan |MAEntwicklung,Feature21|				
