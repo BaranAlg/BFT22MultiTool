@@ -52,11 +52,11 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |           |Entwickler	      |         |Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
-|**Informatik**	    |Menü IT    |Teamkoordinator  |         |ITEntwicklung,Feature11|				
-|		                |	          |Entwickler       |		      |Feature12             |		
-|		                |	          |Entwickler       |         |Feature13             |	
-|		                |	          |Entwickler       |  	      |Feature14             |			
-|		                |	          |Entwickler       |         |Feature15             |			
+|**Informatik**	    |Menü IT    |Teamkoordinator  |     ArthurDyga    |ITEntwicklung,Feature11|				
+|		                |	          |Entwickler       |		 ayoubcgn     |Feature12             |		
+|		                |	          |Entwickler       |      milchschnittyy   |Feature13             |	
+|		                |	          |Entwickler       |  	   st3ch3rcl4n   |Feature14             |			
+|		                |	          |Entwickler       |      Pablo202212   |Feature15             |			
 |		                |	          |	                |		      |		                   |				
 |**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	        |WIEntwicklung,Feature16|				
 |		                |           |Entwickler       |         |Feature17             |		
