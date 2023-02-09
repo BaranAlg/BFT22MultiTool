@@ -40,10 +40,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 | --------------- 	| -------- 	|------		        |--------	|-----------	         |
 |**Administration**	|Release    |Administrator		|     	  |Release, main         |
 |		                |	          |		              |      		|		                   |		
-|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |         |ETEntwicklung,Feature1|
-|                   |           |Entwickler       |         |Feature2              |
-|                   |           |Entwickler       |         |Feature3              |
-|                   |           |Entwickler       |         |Feature4              |
+|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |can827         |ETEntwicklung,Feature1|
+|                   |           |Entwickler       |getoarkastrati         |Feature2              |
+|                   |           |Entwickler       |Ilkan827         |Feature3              |
+|                   |           |Entwickler       |DominicBraun         |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
 |**Physik**	        |Menü PY 	  |Teamkoordinator  |         |PHEntwicklung	,Feature6|
