@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ITBFTKlassenBibliothek\ITBFTKlassenBibliothek.csproj" />
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
   </ItemGroup>
 
