@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
+    <ProjectReference Include="..\PHFragBFTKlassenBibliothek\PHFragBFTKlassenBibliothek.csproj" />
   </ItemGroup>
 
 </Project>

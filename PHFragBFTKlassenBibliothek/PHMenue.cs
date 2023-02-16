@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Figgle;
+﻿using Figgle;
 
-namespace MultiTool
+namespace PHFragBFTKlassenBibliothek
 {
-    internal class Hauptmenue
+    public class PHMenue
     {
-        public static void HauptmenueAufruf()
+
+        public static void PHSubmenu()
         {
             bool Exit = false;
 
@@ -28,7 +24,7 @@ namespace MultiTool
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Hauptmenü <<<\n" +
+                                  "                              >>> Physik Submenu <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
@@ -70,7 +66,7 @@ namespace MultiTool
 
                     case "p":
                         Console.Clear();
-                        PHFragBFTKlassenBibliothek.PHMenue.PHSubmenu();
+                        //Hier das Physikmenü aufrufen
                         break;
 
                     case "w":
