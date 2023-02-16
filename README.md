@@ -46,10 +46,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |                   |           |Entwickler       |   DominicBraun      |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
-|**Physik**	        |Menü PY 	  |Teamkoordinator  |x10Lukas         |PHEntwicklung	,Feature6|
-|		                |Schwerkraft           |Entwickler	      |LeutnantRabe         |Feature7              |		
-|		                |Infos Aufbau	          |Entwickler	      |KhalidSmoqy         |Feature8              |
-|		                |Volumen           |Entwickler	      |lorenormert4242         |Feature9              |
+|**Physik**	        |Menü PY / Vorsätze für Maßeinheiten umwandeln SI-Einheiten umrechen	  |Teamkoordinator  |x10Lukas         |PHEntwicklung	,Feature6|
+|		                |Schwerkraft - Vergleich zu anderen Planeten, Allg. Schwerkraftberechnen           |Entwickler	      |LeutnantRabe         |Feature7              |		
+|		                |Infos zur Aufbau und Struktur der Materie        |Entwickler	      |KhalidSmoqy         |Feature8              |
+|		                |Volumen von Würfeln, Kugel, Pyramide und Prisma          |Entwickler	      |lorenormert4242         |Feature9              |
 |		                |           |Entwickler       |LeonDE         |Feature10             |		
 |		                |	          |                 |         |                      |				
 |**Informatik**	    |Menü IT , Fake Taskmanager   |Teamkoordinator  |     ArthurDyga    |ITEntwicklung,Feature11|				
