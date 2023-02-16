@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Figgle;
+﻿using Figgle;
 
-namespace MultiTool
+
+
+namespace ITBFTKlassenBibliothek
 {
-    internal class Hauptmenue
+    public class ITSubMenue
     {
-        public static void HauptmenueAufruf()
+        public static void ITSubMenue1()
         {
             bool Exit = false;
 
@@ -28,7 +25,7 @@ namespace MultiTool
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Hauptmenü <<<\n" +
+                                  "                              >>> ItMenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
@@ -43,27 +40,27 @@ namespace MultiTool
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
+                Console.WriteLine("\tb - Bits und Bytes umrechner");
+                Console.WriteLine("\tv - Video/Bild/Audio berechner");
+                Console.WriteLine("\tt - Task-Manager");
+                Console.WriteLine("\tp - Passender Arbeitsspeicher rechner");
+                Console.WriteLine("\td - Datei Pfad ausgeben\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
                 {
-                    case "e":
+                    case "b":
                         Console.Clear();
                         //Hier das Etechnikmenü aufrufen
                         break;
 
-                    case "i":
+                    case "v":
                         Console.Clear();
-                        ITBFTKlassenBibliothek.ITSubMenue.ITSubMenue1();
+                        //Hier das Informationstechnikmenü aufrufen
                         break;
 
-                    case "m":
+                    case "t":
                         Console.Clear();
                         //Hier das Mathematikmenü aufrufen
                         break;
@@ -73,13 +70,14 @@ namespace MultiTool
                         //Hier das Physikmenü aufrufen
                         break;
 
-                    case "w":
+                    case "d":
                         Console.Clear();
                         //Hier das Wirtschaftsmenü aufrufen
                         break;
 
                     case "exit":
                         Exit = true;
+                        Console.Clear();
                         break;
                     default:
 
