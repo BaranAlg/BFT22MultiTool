@@ -75,7 +75,7 @@ namespace MultiTool
 
                     case "w":
                         Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
+                        WIBFTKlassenBibliothek.WIMenue.WISubmenü();
                         break;
 
                     case "exit":
