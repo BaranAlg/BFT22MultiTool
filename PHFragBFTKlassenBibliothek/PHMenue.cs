@@ -38,38 +38,39 @@ namespace PHFragBFTKlassenBibliothek
 
 
                 //Eingabeaufforderung 
-                Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
+                Console.WriteLine("Wählen Sie eine der folgenden Physik Unterthemen aus:\n");
+                Console.WriteLine("1. Feature6");
+                Console.WriteLine("2. ");
+                Console.WriteLine("3. ");
+                Console.WriteLine("4. ");
+                Console.WriteLine("5. ");
                 Console.Write("Eingabe: ");
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
                 {
-                    case "e":
+                    case "1":
                         Console.Clear();
+                        Feature6.feature_6();
                         //Hier das Etechnikmenü aufrufen
                         break;
 
-                    case "i":
+                    case "2":
                         Console.Clear();
                         //Hier das Informationstechnikmenü aufrufen
                         break;
 
-                    case "m":
+                    case "3":
                         Console.Clear();
                         //Hier das Mathematikmenü aufrufen
                         break;
 
-                    case "p":
+                    case "4":
                         Console.Clear();
                         //Hier das Physikmenü aufrufen
                         break;
 
-                    case "w":
+                    case "5":
                         Console.Clear();
                         //Hier das Wirtschaftsmenü aufrufen
                         break;
