@@ -39,11 +39,10 @@ namespace WIBFTKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
+                Console.WriteLine("\te - Handyvertrag");
+                Console.WriteLine("\ti - Autoversicherung");
+                Console.WriteLine("\tm - Immobilienrechner");
+                Console.WriteLine("\tp - Gehaltsrechner");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
