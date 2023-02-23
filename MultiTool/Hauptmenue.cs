@@ -66,6 +66,7 @@ namespace MultiTool
                     case "m":
                         Console.Clear();
                         //Hier das Mathematikmenü aufrufen
+                        MABFTKlassenBibliothek.Class1.HauptmenueAufrufe();
                         break;
 
                     case "p":
