@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Figgle;
+﻿using Figgle;
 
-namespace MultiTool
-{
-    internal class Hauptmenue
+namespace MABFTKlassenBibliothek 
+{ 
+
+    public class MAMenue
     {
-        public static void HauptmenueAufruf()
+        public static void MASubMenue()
         {
             bool Exit = false;
 
@@ -28,7 +24,7 @@ namespace MultiTool
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Hauptmenü <<<\n" +
+                                  "                              >>> MASubMenue<<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
@@ -66,7 +62,6 @@ namespace MultiTool
                     case "m":
                         Console.Clear();
                         //Hier das Mathematikmenü aufrufen
-                        MABFTKlassenBibliothek.MAMenue.MASubMenue();
                         break;
 
                     case "p":
