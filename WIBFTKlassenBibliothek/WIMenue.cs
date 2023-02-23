@@ -18,10 +18,10 @@ namespace WIBFTKlassenBibliothek
 
                 //ASCII art Logo wird erzeugt.
                 Console.WriteLine
-                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                    (FiggleFonts.Slant.Render("WirtDoppelt"));
 
                 //Konsolentitel wird geändert.
-                Console.Title = "BFTMultiTool";
+                Console.Title = "WirtDoppelt";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> WISubmenü <<<\n" +
