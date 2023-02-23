@@ -44,7 +44,7 @@ namespace PHFragBFTKlassenBibliothek
                 Console.WriteLine("\tm - Mathematik");
                 Console.WriteLine("\tp - Physik");
                 Console.WriteLine("\tw - Wirtschaft\n");
-                Console.Write("Eingabe:");
+                Console.Write("Eingabe: ");
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
