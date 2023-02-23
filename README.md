@@ -59,8 +59,8 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	 bits und byte umrechner         |Entwickler       |      Pablo202212   |Feature15             |			
 |		                |	          |	                |		      |		                   |				
 |**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	HasanYavuz03        |WIEntwicklung,Feature16|				
-|		                |Versicherungs Rechner           |Entwickler       |BaranAlg         |Feature17             |		
-|		                |	          |Entwickler       |ismocgn7		      |Feature18             |		
+|		                |Auto-Versicherungs Rechner           |Entwickler       |BaranAlg         |Feature17             |		
+|		                |Immobilien Rechner	          |Entwickler       |ismocgn7		      |Feature18             |		
 |		                |Gehalts Rechner	          |Entwickler       |Key20030        |Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
