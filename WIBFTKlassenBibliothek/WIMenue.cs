@@ -50,7 +50,7 @@ namespace WIBFTKlassenBibliothek
                 {
                     case "e":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+                        Handyvertrag.Handyvertrag1();
                         break;
 
                     case "i":
