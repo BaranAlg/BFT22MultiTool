@@ -39,11 +39,10 @@ namespace MABFTKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
+                Console.WriteLine("\te - Wahrscheinlichkeit");
+                Console.WriteLine("\ti - Lineare Funktion");
+                Console.WriteLine("\tm - Quadratische Funktion");
+                Console.WriteLine("\tp - Flächenberechnung");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
@@ -51,27 +50,26 @@ namespace MABFTKlassenBibliothek
                 {
                     case "e":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+
+                        //Hier das Wahrscheinlichkeit aufrufen
                         break;
 
                     case "i":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+
+                        //Hier das Lineare Funktion aufrufen
                         break;
 
                     case "m":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
+
+                        //Hier das Quadratische Funktion aufrufen
                         break;
 
                     case "p":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
-                        break;
 
-                    case "w":
-                        Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
+                        //Hier das Flächenberechnung aufrufen
                         break;
 
                     case "exit":
