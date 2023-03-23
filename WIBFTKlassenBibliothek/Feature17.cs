@@ -1,3 +1,10 @@
+using System;
+using System.Reflection.Emit;
+using System.Runtime.InteropServices;
+using Figgle;
+using System.IO;
+using System.Diagnostics;
+
 
 namespace WIKlassenBibliothek
 {
@@ -5,8 +12,7 @@ namespace WIKlassenBibliothek
    {
        internal static void Feature_17()
        {
-
-
+            
             Console.ForegroundColor = ConsoleColor.Magenta;
             string textToAnimate = (FiggleFonts.Slant.Render("Wilkommen bei der Autoversicherung App "));
             foreach (char c in textToAnimate)
@@ -305,9 +311,7 @@ namespace WIKlassenBibliothek
             }
             
         }
-
-       }
-           static double CalculatePremium(int age, string carBrand, string carClass, int annualMileage)
+        static double CalculatePremium(int age, string carBrand, string carClass, int annualMileage)
         {
             double basePremium = 500;
             if (age < 18 || age == 18)
@@ -355,5 +359,5 @@ namespace WIKlassenBibliothek
             Console.Clear();
             return;
         }
-   }
+    }
 }
