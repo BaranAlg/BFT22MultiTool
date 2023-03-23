@@ -10,7 +10,8 @@ namespace WIKlassenBibliothek
 {
    internal class Feature17
    {
-       internal static void Feature_17()
+        #region main
+        internal static void Feature_17()
        {
             
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -93,7 +94,7 @@ namespace WIKlassenBibliothek
                     }
                     Console.WriteLine("-------------------------------------------");
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    string textToAnimate8 = "Bitte Wählen sie ein Menü Punkt Aus";
+                    string textToAnimate70 = "Bitte Wählen sie ein Menü Punkt Aus";
                     foreach (char c in textToAnimate8)
                     {
                         Console.Write(c);
