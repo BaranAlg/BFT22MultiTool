@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Figgle;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,12 @@ namespace ITBFTKlassenBibliothek
     {
         internal static void Feature_15()
         {
-            Console.WriteLine("test");
-            Console.ReadKey();
+            // code
+
+            Console.WriteLine(FiggleFonts.Slant.Render("Bits und Bytes"));
+            Console.WriteLine(" AusgabeTitel");
+            Console.WriteLine("MenütTitel");
+            Console.WriteLine("f");
         }
     }
 }
