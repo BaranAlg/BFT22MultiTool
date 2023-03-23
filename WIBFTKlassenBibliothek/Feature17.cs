@@ -6,7 +6,7 @@ using System.IO;
 using System.Diagnostics;
 
 
-namespace WIKlassenBibliothek
+namespace WIBFTKlassenBibliothek
 {
    internal class Feature17
    {
