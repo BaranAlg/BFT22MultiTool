@@ -64,7 +64,7 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |Gehalts Rechner	          |Entwickler       |Key20030        |Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
-|**Mathematik**	    |Menü MT    |Teamkoordinator  |NihatArtan |MAEntwicklung,Feature21|				
+|**Mathematik**	    |Menü MT, Wahrscheinlichkeitsrechnung    |Teamkoordinator  |NihatArtan |MAEntwicklung,Feature21|				
 |		                |Flächenberechnung           |Entwickler       |NicoGeno   |Feature22             |		
 |		                |Quadratische Funktion           |Entwickler       |Timsolo0408|Feature23             |		
 |		                |Lineare Funktion           |Entwickler       |Okan       |Feature24             |
