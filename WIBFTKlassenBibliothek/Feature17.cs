@@ -1,7 +1,7 @@
 
 namespace WIKlassenBibliothek
 {
-   internal class Feature1
+   internal class Feature17
    {
        internal static void Feature_17()
        {
