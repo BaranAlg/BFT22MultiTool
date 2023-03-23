@@ -40,7 +40,7 @@ namespace PHFragBFTKlassenBibliothek
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Physik Unterthemen aus:\n");
                 Console.WriteLine("1. Feature6");
-                Console.WriteLine("2. ");
+                Console.WriteLine("2. Feature7");
                 Console.WriteLine("3. ");
                 Console.WriteLine("4. Feature8");
                 Console.WriteLine("5. ");
@@ -51,12 +51,12 @@ namespace PHFragBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
-                        Feature6.feature_6();
                         //Hier das Etechnikmenü aufrufen
                         break;
 
                     case "2":
                         Console.Clear();
+                        Feature7.feature_7();
                         //Hier das Informationstechnikmenü aufrufen
                         break;
 
