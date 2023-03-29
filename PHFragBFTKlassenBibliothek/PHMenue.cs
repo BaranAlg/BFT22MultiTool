@@ -51,7 +51,6 @@ namespace PHFragBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
-                        Feature6.feature_6();
                         //Hier das Etechnikmenü aufrufen
                         break;
 
@@ -67,7 +66,7 @@ namespace PHFragBFTKlassenBibliothek
 
                     case "4":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        Feature8.feature_8();
                         break;
 
                     case "5":
