@@ -21,7 +21,10 @@ namespace ITBFTKlassenBibliothek
             int phy_takt = 0;
             int bandbreite = 0;
             string bandbreite_STR;
-            string[] auswahl = {"0", "0", "0", "0"};
+            string[] auswahl = { "0", "0", "0", "0" };
+            string RAM = "";
+            string namenserweiterung_STR = "";
+            int namenserweiterung = 0;
             int auswahl_int = 0;
             bool convert;
             do
@@ -40,35 +43,28 @@ namespace ITBFTKlassenBibliothek
                 if (phy_takt > 1000)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Bitte geben sie eie gültige takt frequizen an von 0-1000");
+                    Console.WriteLine("Bitte geben sie eie gültige takt Frequenz an von 0-1000");
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                 }
                 else
                 {
                     Console.WriteLine($"{phy_takt} MHz");
                 }
-                Console.WriteLine("3. Rechnung Beginnen");
+                if (phy_takt > 1000)
+                {
+                    Console.WriteLine("3. Rechnung Beginnen");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("(Rechnung kann nicht gestartet werden, Bitte geben sie zuerst eine Gültige Taktfrequenz an.");
+                }
+                else
+                {
+                    Console.WriteLine("3. Rechnung Beginnen");
+                }
                 auswahl[1] = Convert.ToString(Console.ReadLine());
                 switch (auswahl[1])
                 {
                     case "1":
-                        Console.Clear();
-                        Console.WriteLine("Bitte Wähle dein Prozessor aus.");
-                        Console.WriteLine("1. AMD");
-                        Console.WriteLine("2. Intel");
-                        auswahl[2] = Convert.ToString(Console.ReadLine());
-                        switch (auswahl[2])
-                        {
-                            case "1":
-                                cpu_name = "AMD";
-                                cpu_pakete = 2;
-                                break;
-
-                            case "2":
-                                cpu_name = "Intel";
-                                cpu_pakete = 4;
-                                break;
-                        }
+                        Prozessor();
                         break;
                     case "2":
                         PhyTakt();
@@ -76,52 +72,139 @@ namespace ITBFTKlassenBibliothek
                     case "3":
                         if (phy_takt > 1000)
                         {
-                            Feature14.Feature_14();
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("3. Rechnung Beginnen \n(Rechnung kann nicht gestartet werden, Bitte geben sie zuerst eine Gültige Taktfrequenz an.");
+                            Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            Console.ReadKey();
                         }
-                        Console.Clear();
-                        Console.WriteLine("=======================================");
-                        Console.WriteLine("Mit Dieser Formel wird Gerechnet.");
-                        Console.WriteLine("Bandbreite des Prozessors: Phy. Taktrate * Datenpakete * Wortbreite");
-                        bandbreite = phy_takt * cpu_pakete * wortbreite;
-                        Console.WriteLine($"Rechnung: {phy_takt} * {cpu_pakete} * {wortbreite}");
-                        Console.WriteLine("=======================================");
-                        bandbreite_STR = Convert.ToString(bandbreite);
-                        ConsoleKeyInfo keyInfo;
-
-                        do
+                        else
                         {
-                            Console.WriteLine("Drück Enter um das Ergebnis zu Sehen.");
-                            keyInfo = Console.ReadKey();
-                        } while (keyInfo.Key != ConsoleKey.Enter);
-
-                        Console.Clear();
-                        Console.WriteLine(FiggleFonts.Slant.Render("Ergebnis"));
-                        Console.WriteLine(FiggleFonts.Slant.Render($"{bandbreite_STR} Mbyte/s"));
-                        do
-                        {
-                            Console.WriteLine("Drück Enter um die Zweite Rechnung zu starten.");
-                            keyInfo = Console.ReadKey();
-                        } while (keyInfo.Key != ConsoleKey.Enter);
-
-                        Console.Clear();
-                        Console.WriteLine("Geben sie 1 für Singel ein und 2 für Dual.");
-                        auswahl_int = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("=======================================");
-                        Console.WriteLine("Mit Dieser Formel wird Gerechnet.");
-                        Console.WriteLine("Passender RAM: Banbreite / Wortbreite");
-                        int cur_wortbreite = 0;
-                        cur_wortbreite = wortbreite * auswahl_int;
-                        Console.WriteLine($"Rechnung: {bandbreite} Mbyte/s / {cur_wortbreite} Byte");
-                        Console.WriteLine("=======================================");
-                        Console.ReadKey();
+                            Rechnung();
+                        }
                         break;
                 }
                 Console.Clear();
-                static void PhyTakt()
+
+                void Prozessor()
+                {
+                    Console.Clear();
+                    Console.WriteLine("Bitte Wähle dein Prozessor aus.");
+                    Console.WriteLine("1. AMD");
+                    Console.WriteLine("2. Intel");
+                    auswahl[2] = Convert.ToString(Console.ReadLine());
+                    switch (auswahl[2])
+                    {
+                        case "1":
+                            cpu_name = "AMD";
+                            cpu_pakete = 2;
+                            break;
+
+                        case "2":
+                            cpu_name = "Intel";
+                            cpu_pakete = 4;
+                            break;
+                    }
+                }
+                void PhyTakt()
                 {
                     Console.Clear();
                     Console.WriteLine("Bitte Geben sie die Physikalische Taktrate ihres Prozessors an.");
                     phy_takt = Convert.ToInt32(Console.ReadLine());
+                }
+
+                void Rechnung()
+                {
+                    if (phy_takt > 1000)
+                    {
+                        Feature14.Feature_14();
+                    }
+                    Console.Clear();
+                    Console.WriteLine("=======================================");
+                    Console.WriteLine("Mit Dieser Formel wird Gerechnet.");
+                    Console.WriteLine("Bandbreite des Prozessors: Phy. Taktrate * Datenpakete * Wortbreite");
+                    bandbreite = phy_takt * cpu_pakete * wortbreite;
+                    Console.WriteLine($"Rechnung: {phy_takt} * {cpu_pakete} * {wortbreite}");
+                    Console.WriteLine("=======================================");
+                    bandbreite_STR = Convert.ToString(bandbreite);
+                    if (bandbreite <= 1000)
+                    {
+                        RAM = "SDRAM";
+                    } 
+                    else if (bandbreite <= 2100)
+                    {
+                        RAM = "DDR1";
+                    } 
+                    else if (bandbreite <= 8500)
+                    {
+                        RAM = "DDR2";
+                    } 
+                    else if (bandbreite <= 17000)
+                    {
+                        RAM = "DDR3";
+                    }
+                    else if (bandbreite <= 34000)
+                    {
+                        RAM = "DDR4";
+                    }
+                    else if (bandbreite <= 76800)
+                    {
+                        RAM = "DDR5";
+                    }
+                    else
+                    {
+                        RAM = "Du peniskopf das geht nicht";
+                    }
+                    ConsoleKeyInfo keyInfo;
+
+                    do
+                    {
+                        Console.WriteLine("Drück Enter um das Ergebnis zu Sehen.");
+                        keyInfo = Console.ReadKey();
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+
+                    Console.Clear();
+                    Console.WriteLine(FiggleFonts.Slant.Render("Ergebnis"));
+                    Console.WriteLine(FiggleFonts.Slant.Render($"{bandbreite_STR} Mbyte/s"));
+                    do
+                    {
+                        Console.WriteLine("Drück Enter um die Zweite Rechnung zu starten.");
+                        keyInfo = Console.ReadKey();
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+
+                    Console.Clear();
+                    Console.WriteLine("Geben sie 1 für Singel ein und 2 für Dual.");
+                    auswahl_int = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("=======================================");
+                    Console.WriteLine("Mit Dieser Formel wird Gerechnet.");
+                    Console.WriteLine("Passender RAM: Banbreite / Wortbreite");
+                    int cur_wortbreite = 0;
+                    cur_wortbreite = wortbreite * auswahl_int;
+                    namenserweiterung = bandbreite / cur_wortbreite;
+                    Console.WriteLine($"Rechnung: {bandbreite} Mbyte/s / {cur_wortbreite} Byte");
+                    Console.WriteLine("=======================================");
+                    namenserweiterung_STR = Convert.ToString(namenserweiterung);
+
+                    do
+                    {
+                        Console.WriteLine("Drück Enter um das Ergebnis zu Sehen.");
+                        keyInfo = Console.ReadKey();
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+
+                    Console.Clear();
+                    Console.WriteLine(FiggleFonts.Slant.Render("Ergebnis"));
+                    Console.WriteLine(FiggleFonts.Slant.Render($"{namenserweiterung_STR}"));
+
+                    do
+                    {
+                        Console.WriteLine("Drücken sie Enter um Weiter zu Gehen.");
+                        keyInfo = Console.ReadKey();
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+
+                    Console.Clear();
+                    Console.WriteLine(FiggleFonts.Slant.Render("Passender RAM"));
+                    Console.WriteLine(FiggleFonts.Slant.Render($"{RAM}--{namenserweiterung_STR}"));
+
+                    Console.ReadKey();
                 }
 
             } while (true);
