@@ -117,14 +117,14 @@ namespace ITBFTKlassenBibliothek
                         break;
                 }
                 Console.Clear();
-
                 static void PhyTakt()
                 {
                     Console.Clear();
                     Console.WriteLine("Bitte Geben sie die Physikalische Taktrate ihres Prozessors an.");
                     phy_takt = Convert.ToInt32(Console.ReadLine());
                 }
-            }while (true);
+
+            } while (true);
         }
     }
 }
