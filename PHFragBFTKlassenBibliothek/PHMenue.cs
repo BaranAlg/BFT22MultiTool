@@ -81,13 +81,12 @@ namespace PHFragBFTKlassenBibliothek
                     default:
 
                         Console.WriteLine("Ungültige Eingabe");
-                        Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
 
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
-
                         break;
+                        Console.ReadKey();
                 }
 
             } while (!Exit);
