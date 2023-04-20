@@ -66,12 +66,12 @@ namespace ITBFTKlassenBibliothek
 
                     case "p":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+
                         break;
 
                     case "d":
                         Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
+                        Feature13.Feature_13();
                         break;
 
                     case "exit":
