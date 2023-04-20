@@ -27,6 +27,7 @@ namespace ITBFTKlassenBibliothek
             int namenserweiterung = 0;
             int auswahl_int = 0;
             bool convert;
+            bool loop = true;
             do
             {
                 Console.Clear();
@@ -60,6 +61,8 @@ namespace ITBFTKlassenBibliothek
                 {
                     Console.WriteLine("3. Rechnung Beginnen");
                 }
+                Console.WriteLine("4. Sub Menü Verlassen");
+                Console.WriteLine("5. Exit");
                 auswahl[1] = Convert.ToString(Console.ReadLine());
                 switch (auswahl[1])
                 {
@@ -82,6 +85,15 @@ namespace ITBFTKlassenBibliothek
                             Rechnung();
                         }
                         break;
+                    case "4":
+                        loop = false;
+                        break;
+                    case "5":
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Default();
+                        break;
                 }
                 Console.Clear();
 
@@ -102,6 +114,9 @@ namespace ITBFTKlassenBibliothek
                         case "2":
                             cpu_name = "Intel";
                             cpu_pakete = 4;
+                            break;
+                        default:
+                            Default2();
                             break;
                     }
                 }
@@ -207,7 +222,30 @@ namespace ITBFTKlassenBibliothek
                     Console.ReadKey();
                 }
 
-            } while (true);
+                void Default()
+                {
+                    ConsoleKeyInfo keyInfo;
+                    Console.Clear();
+                    Console.WriteLine("Falsche Eingabe");
+                    do
+                    {
+                        Console.WriteLine("Drücken sie Enter um die Eingabe erneut Einzugeben.");
+                        keyInfo = Console.ReadKey();
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+                }
+                void Default2()
+                {
+                    ConsoleKeyInfo keyInfo;
+                    Console.Clear();
+                    Console.WriteLine("Falsche Eingabe");
+                    do
+                    {
+                        Console.WriteLine("Drücken sie Enter um die Eingabe erneut Einzugeben.");
+                        keyInfo = Console.ReadKey();
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+                    Prozessor();
+                }
+            } while (loop == true);
         }
     }
 }
