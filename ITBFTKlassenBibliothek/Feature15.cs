@@ -56,8 +56,59 @@ namespace ITBFTKlassenBibliothek
             }
             else if (auswahl == "2")
             {
-                Console.WriteLine("MenüPunkte: \n1. Tibit\n2. Gibit\n3. Mibit\n4. Kibit\n5. Bit\n6. Tbit\n7. Gbit\n8. Mbit\n9. Kbit\n10. Bit\n11. TByte\n12. GByte\n13. KByte\n14. Byte\n15. TiByte\n16. GiByte\n17. MiByte\n18. KiByte\n19. Byte \n20. ");
-                
+                double value;
+                int from, to;
+
+                Console.WriteLine("Bitte wählen Sie die Ausgangseinheit:");
+                Console.WriteLine("1. Tibit");
+                Console.WriteLine("2. Gibit");
+                Console.WriteLine("3. Mibit");
+                Console.WriteLine("4. Kibit");
+                Console.WriteLine("5. Bit");
+                Console.WriteLine("6. Tbit");
+                Console.WriteLine("7. Gbit");
+                Console.WriteLine("8. Mbit");
+                Console.WriteLine("9. Kbit");
+                Console.WriteLine("10. Bit");
+                Console.WriteLine("11. TByte");
+                Console.WriteLine("12. GByte");
+                Console.WriteLine("13. KByte");
+                Console.WriteLine("14. Byte");
+                Console.WriteLine("15. TiByte");
+                Console.WriteLine("16. GiByte");
+                Console.WriteLine("17. MiByte");
+                Console.WriteLine("18. KiByte");
+                Console.WriteLine("19. Byte");
+                from = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Bitte wählen Sie die Zieleinheit:");
+                Console.WriteLine("1. Tibit");
+                Console.WriteLine("2. Gibit");
+                Console.WriteLine("3. Mibit");
+                Console.WriteLine("4. Kibit");
+                Console.WriteLine("5. Bit");
+                Console.WriteLine("6. Tbit");
+                Console.WriteLine("7. Gbit");
+                Console.WriteLine("8. Mbit");
+                Console.WriteLine("9. Kbit");
+                Console.WriteLine("10. Bit");
+                Console.WriteLine("11. TByte");
+                Console.WriteLine("12. GByte");
+                Console.WriteLine("13. KByte");
+                Console.WriteLine("14. Byte");
+                Console.WriteLine("15. TiByte");
+                Console.WriteLine("16. GiByte");
+                Console.WriteLine("17. MiByte");
+                Console.WriteLine("18. KiByte");
+                Console.WriteLine("19. Byte");
+                to = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Bitte geben Sie den Wert ein, den Sie umrechnen möchten:");
+                value = double.Parse(Console.ReadLine());
+
+                double result = value * Math.Pow(1024, from - 1) / Math.Pow(1024, to - 1);
+                Console.WriteLine("Das Ergebnis ist: {0}", result);
+
             }
             else if (auswahl == "3")
             {
