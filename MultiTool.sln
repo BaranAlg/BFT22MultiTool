@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTool", "MultiTool\Mult
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KonsolenExtrasBibliothek", "KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj", "{1430939F-89DE-4A48-AE68-12C82E1DD471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITBFTKlassenBibliothek", "ITBFTKlassenBibliothek\ITBFTKlassenBibliothek.csproj", "{7ECC2407-73D7-4F42-A6BC-4CEA3B7FAEE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITBFTKlassenBibliothek", "ITBFTKlassenBibliothek\ITBFTKlassenBibliothek.csproj", "{7ECC2407-73D7-4F42-A6BC-4CEA3B7FAEE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
