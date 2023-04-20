@@ -1,6 +1,7 @@
 ﻿using Figgle;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,83 +17,131 @@ namespace ITBFTKlassenBibliothek
             Console.Clear();
 
             Console.WriteLine
-                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                    (FiggleFonts.Slant.Render("DateiGrößenrechner XD"));
 
-            Console.WriteLine("Videobreite und Bildbreite Berchnung");
+            
             Console.WriteLine("------------------------------------");
-
-            Console.WriteLine("Welche Berechnung möchten Sie durchführen?");
-            Console.WriteLine("");
-            Console.WriteLine("1 - Videobreite");
-            Console.WriteLine("2 - Bildbreite");
-            int auswahl = int.Parse(Console.ReadLine());
-
-            double breite = 0;
-            double hoehe = 0;
-            double bildfrequenz = 0;
-
-            switch (auswahl)
+            Console.WriteLine("Willkommen im Video- und Bilddateigrößenrechner!");
+            Console.WriteLine("------------------------------------");
+            int auswahl = 0;
+            Console.WriteLine();
+            do
             {
-                case 1:
-                    Console.WriteLine("Geben Sie die Höhe des Videos in Pixeln ein:");
-                    hoehe = double.Parse(Console.ReadLine());
+                Console.WriteLine("Was möchten Sie berechnen?");
+                Console.WriteLine("1. Video-Dateigröße");
+                Console.WriteLine("2. Bild-Dateigröße");
+                Console.Write("Geben Sie die entsprechende Zahl ein (1 oder 2): ");
 
-                    Console.WriteLine("Haben Sie die Bildfrequenz in Hertz (fps)? (Ja/Nein)");
-                    string eingabeFps = Console.ReadLine();
-                    if (eingabeFps.ToLower() == "ja")
-                    {
-                        Console.WriteLine("Geben Sie die Bildfrequenz in Hertz ein:");
-                        bildfrequenz = double.Parse(Console.ReadLine());
-                    }
-                    else
-                    {
-                        Console.WriteLine("Geben Sie die Dauer des Videos in Sekunden ein:");
-                        double dauer = double.Parse(Console.ReadLine());
-                        bildfrequenz = 30; 
-                        if (dauer > 0)
-                        {
-                            bildfrequenz = 1 / dauer;
-                        }
-                    }
+                string auswahlString = Console.ReadLine();
 
-                    breite = hoehe * (16.0 / 9.0) * bildfrequenz * 4.0;
-                    Console.WriteLine("Die Videobreite beträgt " + breite + " Pixel");
+                if (!int.TryParse(auswahlString, out auswahl) || (auswahl != 1 && auswahl != 2))
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte geben Sie entweder 1 oder 2 ein.");
+                }
+            } while (auswahl != 1 && auswahl != 2);
+
+            int pixel = 0;
+            int dpi = 0;
+
+            do
+            {
+                Console.Write("Geben Sie die Pixelanzahl ein: ");
+                string pixelString = Console.ReadLine();
+
+                if (!int.TryParse(pixelString, out pixel) || pixel < 0)
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine positive Ganzzahl ein.");
+                }
+            } while (pixel < 0);
+
+            do
+            {
+                Console.Write("Geben Sie die DPI (dots per inch) ein: ");
+                string dpiString = Console.ReadLine();
+
+                if (!int.TryParse(dpiString, out dpi) || dpi < 0)
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine positive Ganzzahl ein.");
+                }
+            } while (dpi < 0);
+
+            double sizeInBytes = 0;
+
+            if (auswahl == 1)
+            {
+                Console.Write("Geben Sie die Länge des Videos in Sekunden ein: ");
+                string lengthString = Console.ReadLine();
+
+                int lengthInSeconds = 0;
+                if (!int.TryParse(lengthString, out lengthInSeconds) || lengthInSeconds < 0)
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine positive Ganzzahl ein.");
+                    return;
+                }
+
+                sizeInBytes = pixel * pixel * dpi * dpi * lengthInSeconds * 3;
+            }
+            else
+            {
+                sizeInBytes = pixel * pixel * dpi * dpi * 3;
+            }
+
+            Console.WriteLine($"Die Dateigröße beträgt {sizeInBytes:N2} Bytes.");
+
+            
+            double ergebnis = 0;
+
+
+            
+            Console.WriteLine("Möchten Sie das Ergebnis in eine andere Einheit umrechnen?");
+            Console.WriteLine("1. Byte");
+            Console.WriteLine("2. Kilobyte");
+            Console.WriteLine("3. Megabyte");
+            Console.WriteLine("4. Gigabyte");
+            Console.WriteLine("5. Nein");
+
+            int umrechnungAuswahl = 0;
+            do
+        {
+                Console.Write("Geben Sie die entsprechende Zahl ein (1-5): ");
+
+                string umrechnungAuswahlString = Console.ReadLine();
+
+                if (!int.TryParse(umrechnungAuswahlString, out umrechnungAuswahl) || (umrechnungAuswahl < 1 || umrechnungAuswahl > 5))
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl zwischen 1 und 5 ein.");
+                }
+            } while (umrechnungAuswahl < 1 || umrechnungAuswahl > 5) ;
+
+            double umgerechneteGröße = sizeInBytes;
+
+            switch (umrechnungAuswahl)
+            {
+                case 1: // Byte
+                    Console.WriteLine("Die Dateigröße beträgt: " + umgerechneteGröße + " Bytes.");
                     break;
 
-                case 2:
-                    Console.WriteLine("Geben Sie die Breite des Videos in Pixeln ein:");
-                    breite = double.Parse(Console.ReadLine());
-
-                    Console.WriteLine("Haben Sie die Bildfrequenz in Hertz (fps)? (Ja/Nein)");
-                    eingabeFps = Console.ReadLine();
-                    if (eingabeFps.ToLower() == "ja")
-                    {
-                        Console.WriteLine("Geben Sie die Bildfrequenz in Hertz ein:");
-                        bildfrequenz = double.Parse(Console.ReadLine());
-                    }
-                    else
-                    {
-                        Console.WriteLine("Geben Sie die Dauer des Videos in Sekunden ein:");
-                        double dauer = double.Parse(Console.ReadLine());
-                        bildfrequenz = 30; 
-                        if (dauer > 0)
-                        {
-                            bildfrequenz = 1 / dauer;
-                        }
-                    }
-
-                    hoehe = breite / (16.0 / 9.0) / bildfrequenz / 4.0;
-                    Console.WriteLine("Die Bildbreite beträgt " + breite + " Pixel und die Bildhöhe beträgt " + hoehe + " Pixel");
+                case 2: // Kilobyte
+                    umgerechneteGröße /= 1024;
+                    Console.WriteLine("Die Dateigröße beträgt: " + umgerechneteGröße + " Kilobytes.");
                     break;
 
-                default:
-                    Console.WriteLine("Ungültige Auswahl!");
+                case 3: // Megabyte
+                    umgerechneteGröße /= 1024 * 1024;
+                    Console.WriteLine("Die Dateigröße beträgt: " + umgerechneteGröße + " Megabytes.");
+                    break;
+
+                case 4: // Gigabyte
+                    umgerechneteGröße /= 1024 * 1024 * 1024;
+                    Console.WriteLine("Die Dateigröße beträgt: " + umgerechneteGröße + " Gigabytes.");
+                    break;
+
+                case 5: // Nein
+                    Console.WriteLine("Vielen Dank für die Verwendung des Video- und Bilddateigrößenrechners!");
                     break;
             }
 
-            Console.WriteLine("Drücken Sie eine beliebige Taste, um das Programm zu beenden.");
-            Console.ReadKey();
-
+            Console.ReadLine();
 
 
         }
