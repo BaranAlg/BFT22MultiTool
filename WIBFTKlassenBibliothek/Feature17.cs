@@ -38,15 +38,12 @@ namespace WIBFTKlassenBibliothek
             string textToAnimate55 = "Bitte Wählen sie ein Menü Punkt Aus";
             foreach (char c in textToAnimate55)
             {
-                Console.Write(c);
-                if (Console.ReadKey().Key == ConsoleKey.Enter) 
+                foreach (char c in textToAnimate9)
                 {
-                    Thread.Sleep(4);
+                    Console.Write(c);
+                    Thread.Sleep(1);
                 }
-                else
-                {
-                    Thread.Sleep(20);
-                }
+                Console.WriteLine();
             }
             Console.WriteLine();
             Console.Clear();
