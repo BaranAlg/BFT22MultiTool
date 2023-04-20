@@ -38,12 +38,35 @@ namespace PHFragBFTKlassenBibliothek
                 string option = Console.ReadLine();
 
                 switch (option)
+
                 {
                     case "1":
+                        Console.Clear();
+                        Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                          "|                      >>> Meter in Kilometer umrechen <<<                         |\n" +
+                                          "------------------------------------------------------------------------------------\n\n");
                         Console.Write("Bitte geben Sie die Länge in Metern ein: ");
-                        double meters = double.Parse(Console.ReadLine());
-                        double kilometers = meters / 1000;
-                        Console.WriteLine($"{meters} Meter entsprechen {kilometers} Kilometer.");
+                        string input = Console.ReadLine();
+
+                        if (input.ToLower() == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (input.ToLower() == "subexit")
+                        {
+                            return; // Programm beenden
+                        }
+                        else if (double.TryParse(input, out double meters))
+                        {
+                            double kilometers = meters / 1000;
+                            Console.WriteLine($"{meters} Meter entsprechen {kilometers} Kilometer.");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein.");
+                            break;
+                        }
                         break;
 
                     case "2":
