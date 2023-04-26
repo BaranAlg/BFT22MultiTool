@@ -145,6 +145,7 @@ namespace ITBFTKlassenBibliothek
                             break;
                     }
                 }
+
                 void PhyTakt()
                 {
                     Console.Clear();
