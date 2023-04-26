@@ -62,11 +62,12 @@ namespace ITBFTKlassenBibliothek
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(FiggleFonts.Slant.Render("Laufende-Programme"));
                     Console.ForegroundColor = ConsoleColor.Green;
-                    for (int i = 0; i < processes.Length; i++)
+                    foreach (var process in processes)
                     {
-                        if (!string.IsNullOrEmpty(processes[i].MainWindowTitle))
+                        if (!string.IsNullOrEmpty(process.MainWindowTitle))
                         {
-                            Console.WriteLine($"{i + 1}. {processes[i].MainWindowTitle}");
+                            int index = Array.IndexOf(processes, process);
+                            Console.WriteLine($"{index + 1}. {process.MainWindowTitle}");
                         }
                     }
                     Console.ForegroundColor = ConsoleColor.White;
@@ -141,36 +142,24 @@ namespace ITBFTKlassenBibliothek
                 static void PC_Auslastung()
                 {
                     Console.Clear();
+                    PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+                    PerformanceCounter ramCounter = new PerformanceCounter("Memory", "Available GBytes");
                     while (!Console.KeyAvailable)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine(FiggleFonts.Slant.Render("Pc-Auslastung:"));
                         Console.ForegroundColor = ConsoleColor.Green;
-                        float cpuUsage = GetCpuUsage();
-                        float ramUsage = GetRamUsage();
+                        float cpuUsage = cpuCounter.NextValue();
+                        float ramUsage = ramCounter.NextValue();
 
-                        Console.WriteLine("\n\n\n\nAuslastung: " + cpuUsage.ToString("F") + "%");
-                        Console.WriteLine("RAM-Übrig: " + ramUsage.ToString("F") + " MB\n\n\n\n");
+                        Console.WriteLine($"\n\n\n\nAuslastung: {cpuUsage:F2}%");
+                        Console.WriteLine($"RAM-Übrig: {ramUsage}MB\n\n\n\n");
 
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine("Drücken Sie eine beliebige Taste zum Fortfahren.");
                         System.Threading.Thread.Sleep(2500);
                         Console.Clear();
                     }
-                    static float GetCpuUsage()
-                    {
-                        PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-                        cpuCounter.NextValue();
-                        System.Threading.Thread.Sleep(2500);
-                        return cpuCounter.NextValue();
-                    }
-
-                    static float GetRamUsage()
-                    {
-                        PerformanceCounter ramCounter = new PerformanceCounter("Memory", "Available MBytes");
-                        return ramCounter.NextValue();
-                    }
-
                 }
             } while (Schleife == true);
             Console.ForegroundColor = ConsoleColor.Green;
