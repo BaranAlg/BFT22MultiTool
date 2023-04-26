@@ -1,8 +1,6 @@
 ﻿using Figgle;
 using System.Diagnostics;
 using System.Management;
-using System.Net;
-using System.Net.NetworkInformation;
 
 namespace ITBFTKlassenBibliothek
 {
@@ -143,7 +141,7 @@ namespace ITBFTKlassenBibliothek
                 {
                     Console.Clear();
                     PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-                    PerformanceCounter ramCounter = new PerformanceCounter("Memory", "Available GBytes");
+                    PerformanceCounter ramCounter = new PerformanceCounter("Memory", "Available MBytes");
                     while (!Console.KeyAvailable)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
