@@ -25,7 +25,7 @@ namespace ITBFTKlassenBibliothek
             string RAM = "";
             string namenserweiterung_STR = "";
             int namenserweiterung = 0;
-            int auswahl_int = 0;
+            int modus = 0;
             bool convert;
             bool loop = true;
             do
@@ -36,6 +36,9 @@ namespace ITBFTKlassenBibliothek
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine(FiggleFonts.Slant.Render("RAM Rechner"));
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine(" ");
+                Console.WriteLine(" Exit = Beendet das Programm");
+                Console.WriteLine(" Subexit = Zurück ins IT-Menü");
                 Console.WriteLine("========================================================================");
                 Console.WriteLine(" ");
                 Console.WriteLine("1. Prozessor Auswählen");
@@ -61,9 +64,15 @@ namespace ITBFTKlassenBibliothek
                 {
                     Console.WriteLine("3. Rechnung Beginnen");
                 }
-                Console.WriteLine("4. Sub Menü Verlassen");
-                Console.WriteLine("5. Exit");
                 auswahl[1] = Convert.ToString(Console.ReadLine());
+                if (auswahl[1] == "exit")
+                {
+                    auswahl[1] = "Exit";
+                }
+                else if (auswahl[1] == "subexit")
+                {
+                    auswahl[1] = "Subexit";
+                }
                 switch (auswahl[1])
                 {
                     case "1":
@@ -85,10 +94,10 @@ namespace ITBFTKlassenBibliothek
                             Rechnung();
                         }
                         break;
-                    case "4":
+                    case "Subexit":
                         loop = false;
                         break;
-                    case "5":
+                    case "Exit":
                         Environment.Exit(0);
                         break;
                     default:
@@ -100,10 +109,20 @@ namespace ITBFTKlassenBibliothek
                 void Prozessor()
                 {
                     Console.Clear();
+                    Console.WriteLine("===============================");
                     Console.WriteLine("Bitte Wähle dein Prozessor aus.");
+                    Console.WriteLine("===============================");
                     Console.WriteLine("1. AMD");
                     Console.WriteLine("2. Intel");
                     auswahl[2] = Convert.ToString(Console.ReadLine());
+                    if (auswahl[2] == "exit")
+                    {
+                        auswahl[2] = "Exit";
+                    }
+                    else if (auswahl[2] == "subexit")
+                    {
+                        auswahl[2] = "Subexit";
+                    }
                     switch (auswahl[2])
                     {
                         case "1":
@@ -115,6 +134,12 @@ namespace ITBFTKlassenBibliothek
                             cpu_name = "Intel";
                             cpu_pakete = 4;
                             break;
+                        case "Subexit":
+                            Feature_14();
+                            break;
+                        case "Exit":
+                            Environment.Exit(0);
+                            break;
                         default:
                             Default2();
                             break;
@@ -123,8 +148,43 @@ namespace ITBFTKlassenBibliothek
                 void PhyTakt()
                 {
                     Console.Clear();
-                    Console.WriteLine("Bitte Geben sie die Physikalische Taktrate ihres Prozessors an.");
-                    phy_takt = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("===================================================");
+                    Console.WriteLine("Bitte gib eine Physikalische Takrate von 1-1000 an.");
+                    Console.WriteLine("===================================================");
+                    Console.WriteLine(" ");
+
+                    while (true)
+                    {
+                        string eingabe = Console.ReadLine();
+
+                        if (eingabe.ToLower() == "exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else if (eingabe.ToLower() == "subexit")
+                        {
+                            Feature_14();
+                            return;
+                        }
+                        else if (int.TryParse(eingabe, out int phyTaktInput))
+                        {
+                            if (phyTaktInput < 1 || phyTaktInput > 1000)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Bitte geben sie eine gültige Taktfrequenz an von 1-1000 MHz.");
+                                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                            }
+                            else
+                            {
+                                phy_takt = phyTaktInput;
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Wrong Answer!");
+                        }
+                    }
                 }
 
                 void Rechnung()
@@ -165,10 +225,6 @@ namespace ITBFTKlassenBibliothek
                     {
                         RAM = "DDR5";
                     }
-                    else
-                    {
-                        RAM = "Du peniskopf das geht nicht";
-                    }
                     ConsoleKeyInfo keyInfo;
 
                     do
@@ -185,19 +241,52 @@ namespace ITBFTKlassenBibliothek
                         Console.WriteLine("Drück Enter um die Zweite Rechnung zu starten.");
                         keyInfo = Console.ReadKey();
                     } while (keyInfo.Key != ConsoleKey.Enter);
+                    Rechnung2();
 
+                    
+                }
+
+                void Rechnung2()
+                {
                     Console.Clear();
-                    Console.WriteLine("Geben sie 1 für Singel ein und 2 für Dual.");
-                    auswahl_int = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Geben sie 1 für Singel ein und 2 für Dual Modus.");
+                    auswahl[3] = Convert.ToString(Console.ReadLine());
+                    if (auswahl[3] == "exit")
+                    {
+                        auswahl[3] = "Exit";
+                    }
+                    else if (auswahl[3] == "subexit")
+                    {
+                        auswahl[3] = "Subexit";
+                    }
+                    switch (auswahl[3])
+                    {
+                        case "1":
+                            modus = 1;
+                            break;
+                        case "2":
+                            modus = 2;
+                            break;
+                        case "Subexit":
+                            Feature_14();
+                            break;
+                        case "Exit":
+                            Environment.Exit(0);
+                            break;
+                        default:
+                            Default3();
+                            break;
+                    }
                     Console.WriteLine("=======================================");
                     Console.WriteLine("Mit Dieser Formel wird Gerechnet.");
                     Console.WriteLine("Passender RAM: Banbreite / Wortbreite");
                     int cur_wortbreite = 0;
-                    cur_wortbreite = wortbreite * auswahl_int;
+                    cur_wortbreite = wortbreite * modus;
                     namenserweiterung = bandbreite / cur_wortbreite;
                     Console.WriteLine($"Rechnung: {bandbreite} Mbyte/s / {cur_wortbreite} Byte");
                     Console.WriteLine("=======================================");
                     namenserweiterung_STR = Convert.ToString(namenserweiterung);
+                    ConsoleKeyInfo keyInfo;
 
                     do
                     {
@@ -214,12 +303,17 @@ namespace ITBFTKlassenBibliothek
                         Console.WriteLine("Drücken sie Enter um Weiter zu Gehen.");
                         keyInfo = Console.ReadKey();
                     } while (keyInfo.Key != ConsoleKey.Enter);
+                    Ergebnis();
+                }
 
+                void Ergebnis()
+                {
                     Console.Clear();
                     Console.WriteLine(FiggleFonts.Slant.Render("Passender RAM"));
                     Console.WriteLine(FiggleFonts.Slant.Render($"{RAM}--{namenserweiterung_STR}"));
 
                     Console.ReadKey();
+                    Feature_14();
                 }
 
                 void Default()
@@ -244,6 +338,19 @@ namespace ITBFTKlassenBibliothek
                         keyInfo = Console.ReadKey();
                     } while (keyInfo.Key != ConsoleKey.Enter);
                     Prozessor();
+                }
+
+                void Default3()
+                {
+                    ConsoleKeyInfo keyInfo;
+                    Console.Clear();
+                    Console.WriteLine("Falsche Eingabe");
+                    do
+                    {
+                        Console.WriteLine("Drücken sie Enter um die Eingabe erneut Einzugeben.");
+                        keyInfo = Console.ReadKey();
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+                    Rechnung2();
                 }
             } while (loop == true);
         }
