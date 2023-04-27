@@ -41,7 +41,7 @@ namespace ITBFTKlassenBibliothek
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\tb - Bits und Bytes umrechner");
-                Console.WriteLine("\tv - Video/Bild/Audio berechner");
+                Console.WriteLine("\tv - Video und Bild berechner");
                 Console.WriteLine("\tt - Task-Manager");
                 Console.WriteLine("\tp - Passender Arbeitsspeicher rechner");
                 Console.WriteLine("\td - Datei Pfad ausgeben\n");
@@ -56,8 +56,10 @@ namespace ITBFTKlassenBibliothek
                         break;
 
                     case "v":
+                       
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+                        //Hier Feature1 aufrufen
+                        Feature12.Feature_12();
                         break;
 
                     case "t":
