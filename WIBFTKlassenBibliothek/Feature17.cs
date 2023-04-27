@@ -8,12 +8,12 @@ using System.Diagnostics;
 
 namespace WIBFTKlassenBibliothek
 {
-   internal class Feature17
-   {
+    internal class Feature17
+    {
         #region main
         internal static void Feature_17()
-       {
-            
+        {
+
             Console.ForegroundColor = ConsoleColor.Magenta;
             string textToAnimate = (FiggleFonts.Slant.Render("Wilkommen bei der Autoversicherung App "));
             foreach (char c in textToAnimate)
@@ -32,18 +32,6 @@ namespace WIBFTKlassenBibliothek
             {
                 Console.Write(c);
                 Thread.Sleep(1);
-            }
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            string textToAnimate55 = "Bitte Wählen sie ein Menü Punkt Aus";
-            foreach (char c in textToAnimate55)
-            {
-                foreach (char c in textToAnimate9)
-                {
-                    Console.Write(c);
-                    Thread.Sleep(1);
-                }
-                Console.WriteLine();
             }
             Console.WriteLine();
             Console.Clear();
@@ -139,7 +127,7 @@ namespace WIBFTKlassenBibliothek
                     case 3:
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Cyan;
-                        string textToAnimate7 = (FiggleFonts.Slant.Render("Beenden ! "));
+                        string textToAnimate7 = (FiggleFonts.Slant.Render("Auf Wiedersehen ! "));
                         foreach (char c in textToAnimate7)
                         {
                             if (c == '\n')
@@ -163,8 +151,8 @@ namespace WIBFTKlassenBibliothek
 
             #endregion
 
-            
-           
+
+
             static void GetUserInformation()
             {
                 Console.Clear();
@@ -307,7 +295,7 @@ namespace WIBFTKlassenBibliothek
                     } while (choice != default) ;
                 }
             }
-            
+
         }
         static double CalculatePremium(int age, string carBrand, string carClass, int annualMileage)
         {
