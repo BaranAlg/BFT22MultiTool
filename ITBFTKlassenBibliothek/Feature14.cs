@@ -58,7 +58,7 @@ namespace ITBFTKlassenBibliothek
                 {
                     Console.WriteLine("3. Rechnung Beginnen");
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("(Rechnung kann nicht gestartet werden, Bitte geben sie zuerst eine Gültige Taktfrequenz an.");
+                    Console.WriteLine("Rechnung kann nicht gestartet werden, Bitte geben sie zuerst eine Gültige Taktfrequenz an.");
                 }
                 else
                 {
@@ -85,7 +85,7 @@ namespace ITBFTKlassenBibliothek
                         if (phy_takt > 1000)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("3. Rechnung Beginnen \n(Rechnung kann nicht gestartet werden, Bitte geben sie zuerst eine Gültige Taktfrequenz an.");
+                            Console.WriteLine("3. Rechnung Beginnen \nRechnung kann nicht gestartet werden, Bitte geben sie zuerst eine Gültige Taktfrequenz an.");
                             Console.ForegroundColor = ConsoleColor.DarkGreen;
                             Console.ReadKey();
                         }
@@ -156,18 +156,18 @@ namespace ITBFTKlassenBibliothek
 
                     while (true)
                     {
-                        string eingabe = Console.ReadLine();
+                        auswahl[3] = Console.ReadLine();
 
-                        if (eingabe.ToLower() == "exit")
+                        if (auswahl[3].ToLower() == "exit")
                         {
                             Environment.Exit(0);
                         }
-                        else if (eingabe.ToLower() == "subexit")
+                        else if (auswahl[3].ToLower() == "subexit")
                         {
                             Feature_14();
                             return;
                         }
-                        else if (int.TryParse(eingabe, out int phyTaktInput))
+                        else if (int.TryParse(auswahl[4], out int phyTaktInput))
                         {
                             if (phyTaktInput < 1 || phyTaktInput > 1000)
                             {
@@ -183,7 +183,7 @@ namespace ITBFTKlassenBibliothek
                         }
                         else
                         {
-                            Console.WriteLine("Wrong Answer!");
+                            Console.WriteLine("Falsche Eingabe \nBitte geben sie eine Zahl ein.");
                         }
                     }
                 }
@@ -192,7 +192,7 @@ namespace ITBFTKlassenBibliothek
                 {
                     if (phy_takt > 1000)
                     {
-                        Feature14.Feature_14();
+                        Feature_14();
                     }
                     Console.Clear();
                     Console.WriteLine("=======================================");
@@ -251,16 +251,16 @@ namespace ITBFTKlassenBibliothek
                 {
                     Console.Clear();
                     Console.WriteLine("Geben sie 1 für Singel ein und 2 für Dual Modus.");
-                    auswahl[3] = Convert.ToString(Console.ReadLine());
-                    if (auswahl[3] == "exit")
+                    auswahl[4] = Convert.ToString(Console.ReadLine());
+                    if (auswahl[4] == "exit")
                     {
-                        auswahl[3] = "Exit";
+                        auswahl[4] = "Exit";
                     }
-                    else if (auswahl[3] == "subexit")
+                    else if (auswahl[4] == "subexit")
                     {
-                        auswahl[3] = "Subexit";
+                        auswahl[4] = "Subexit";
                     }
-                    switch (auswahl[3])
+                    switch (auswahl[4])
                     {
                         case "1":
                             modus = 1;
