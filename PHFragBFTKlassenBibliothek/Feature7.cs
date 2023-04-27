@@ -34,17 +34,12 @@ namespace PHFragBFTKlassenBibliothek
                     case "1":
                         Console.Write("\nGeben Sie den Namen des Planeten ein: ");
                         planetName = Console.ReadLine();
-                        Console.Write("Geben Sie die Masse des Planeten in kg ein: ");
+                        Console.Write("\nGeben Sie die Masse des Planeten in kg ein: ");
                         m = double.Parse(Console.ReadLine());
-                        Console.Write("Geben Sie den Radius des Planeten in Metern ein: ");
+                        Console.Write("\nGeben Sie den Radius des Planeten in Metern ein: ");
                         r = double.Parse(Console.ReadLine());
 
                         double F = G * m / (r * r);
-
-                        Console.WriteLine("\nDie Schwerkraft des Planeten beträgt {0} N.\n", F);
-
-                        Console.Write("Möchten Sie den Planeten speichern? (yes/no): ");
-                        string save = Console.ReadLine();
                         break;
 
                     case "exit":
