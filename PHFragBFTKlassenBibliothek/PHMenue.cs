@@ -15,17 +15,16 @@ namespace PHFragBFTKlassenBibliothek
                 (int, int) cPosBM = Console.GetCursorPosition();
 
                 Console.WriteLine();
-
+                Console.ForegroundColor = ConsoleColor.Green;
                 //ASCII art Logo wird erzeugt.
-                Console.WriteLine
-                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                Console.WriteLine(FiggleFonts.Slant.Render("BFTMultiTool"));
 
                 //Konsolentitel wird geändert.
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Physik Submenu <<<\n" +
-                                  "------------------------------------------------------------------------------------\n\n");
+                                  "|                              >>> Physik Submenu <<<                              |\n" +
+                                  "------------------------------------------------------------------------------------\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
 
@@ -39,12 +38,11 @@ namespace PHFragBFTKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Physik Unterthemen aus:\n");
-                Console.WriteLine("1. Feature6");
-                Console.WriteLine("2. ");
-                Console.WriteLine("3. ");
-                Console.WriteLine("4. Feature8");
-                Console.WriteLine("5. ");
-                Console.Write("Eingabe: ");
+                Console.WriteLine("1. Konverter");
+                Console.WriteLine("2. Schwerkraft-Rechner");
+                Console.WriteLine("3. Aufbau und Strucktur der Materie");
+                Console.WriteLine("4. Berechnung von Volumen");
+                Console.Write("\nEingabe: ");
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
@@ -52,29 +50,22 @@ namespace PHFragBFTKlassenBibliothek
                     case "1":
                         Console.Clear();
                         Feature6.feature_6();
-                        //Hier das Etechnikmenü aufrufen
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+                        Feature7.feature_7();
                         break;
 
                     case "3":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
+                        Feature8.feature_8();
                         break;
 
                     case "4":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        Feature9.feature_9();
                         break;
-
-                    case "5":
-                        Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
-                        break;
-
                     case "exit":
                         Exit = true;
                         break;
