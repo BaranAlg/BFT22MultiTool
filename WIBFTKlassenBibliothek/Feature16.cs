@@ -67,7 +67,7 @@ namespace WIBFTKlassenBibliothek
                     }
                     else if (!double.TryParse(datenvolumenStr, out Datenvolumen_Double) && datenvolumenStr != "subexit")
                     {
-                        Console.WriteLine("Bitte geben Sie das Datenvolumen in GB ein:");
+                        Console.WriteLine("Falsche eingabe! Bitte geben Sie ihr Datenvolumen in GB ein:");
                         crash = true;
                         Console.ReadKey();
                     }
