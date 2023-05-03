@@ -1,4 +1,4 @@
-﻿
+
 using Figgle;
 
 namespace WIBFTKlassenBibliothek
