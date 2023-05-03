@@ -61,12 +61,12 @@ namespace WIBFTKlassenBibliothek
 
                     case "m":
                         Console.Clear();
-                        
+                        Feature18.Feature_18();
                         break;
 
                     case "p":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        Feature19.Feature_19();
                         break;
 
                     case "w":
