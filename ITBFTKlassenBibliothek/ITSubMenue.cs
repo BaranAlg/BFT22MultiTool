@@ -52,12 +52,12 @@ namespace ITBFTKlassenBibliothek
                 {
                     case "b":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+                        Feature15.Feature_15();
                         break;
 
                     case "v":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+                        Feature12.Feature_12();
                         break;
 
                     case "t":
@@ -67,7 +67,7 @@ namespace ITBFTKlassenBibliothek
 
                     case "p":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        Feature14.Feature_14();
                         break;
 
                     case "d":
