@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITBFTKlassenBibliothek", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MABFTKlassenBibliothek", "MABFTKlassenBibliothek\MABFTKlassenBibliothek.csproj", "{8EEF9219-88D2-4EF2-AEC7-65760ACB0150}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PHFragBFTKlassenBibliothek", "PHFragBFTKlassenBibliothek\PHFragBFTKlassenBibliothek.csproj", "{0694C2DC-4367-4C5C-936D-F2ECB02CF8E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{8EEF9219-88D2-4EF2-AEC7-65760ACB0150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EEF9219-88D2-4EF2-AEC7-65760ACB0150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EEF9219-88D2-4EF2-AEC7-65760ACB0150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0694C2DC-4367-4C5C-936D-F2ECB02CF8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0694C2DC-4367-4C5C-936D-F2ECB02CF8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0694C2DC-4367-4C5C-936D-F2ECB02CF8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0694C2DC-4367-4C5C-936D-F2ECB02CF8E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
