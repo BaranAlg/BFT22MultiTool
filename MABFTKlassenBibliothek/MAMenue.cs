@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Figgle;
+﻿using Figgle;
 
-namespace MultiTool
-{
-    internal class Hauptmenue
+namespace MABFTKlassenBibliothek 
+{ 
+
+    public class MAMenue
     {
-        public static void HauptmenueAufruf()
+        public static void MASubMenue()
         {
             bool Exit = false;
 
@@ -28,7 +24,7 @@ namespace MultiTool
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Hauptmenü <<<\n" +
+                                  "                              >>> MASubMenue<<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
@@ -43,11 +39,10 @@ namespace MultiTool
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
+                Console.WriteLine("\te - Wahrscheinlichkeit");
+                Console.WriteLine("\ti - Lineare Funktion");
+                Console.WriteLine("\tm - Quadratische Funktion");
+                Console.WriteLine("\tp - Flächenberechnung");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
@@ -55,28 +50,26 @@ namespace MultiTool
                 {
                     case "e":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+
+                        //Hier das Wahrscheinlichkeit aufrufen
                         break;
 
                     case "i":
                         Console.Clear();
-                        ITBFTKlassenBibliothek.ITSubMenue.ITSubMenue1();
+
+                        //Hier das Lineare Funktion aufrufen
                         break;
 
                     case "m":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
-                        MABFTKlassenBibliothek.MAMenue.MASubMenue();
+
+                        //Hier das Quadratische Funktion aufrufen
                         break;
 
                     case "p":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
-                        break;
 
-                    case "w":
-                        Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
+                        //Hier das Flächenberechnung aufrufen
                         break;
 
                     case "exit":
