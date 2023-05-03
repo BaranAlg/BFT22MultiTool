@@ -1,22 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Feature16.cs" />
+    <Compile Remove="Feature17.cs" />
+    <Compile Remove="Feature18.cs" />
+    <Compile Remove="Feature19.cs" />
+    <Compile Remove="WIMenue.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Figgle" Version="0.5.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ITBFTKlassenBibliothek\ITBFTKlassenBibliothek.csproj" />
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
-    <ProjectReference Include="..\MABFTKlassenBibliothek\MABFTKlassenBibliothek.csproj" />
-    <ProjectReference Include="..\PHFragBFTKlassenBibliothek\PHFragBFTKlassenBibliothek.csproj" />
-    <ProjectReference Include="..\WIBFTKlassenBibliothek\WIBFTKlassenBibliothek.csproj" />
   </ItemGroup>
 
 </Project>
