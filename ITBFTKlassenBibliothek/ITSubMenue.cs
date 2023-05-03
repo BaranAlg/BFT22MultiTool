@@ -52,21 +52,22 @@ namespace ITBFTKlassenBibliothek
                 {
                     case "b":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+                        Feature15.Feature_15();
                         break;
 
                     case "v":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+                        Feature12.Feature_12();
                         break;
 
                     case "t":
                         Console.Clear();
+                        Feature11.TaskManager();
                         break;
 
                     case "p":
                         Console.Clear();
-
+                        Feature14.Feature_14();
                         break;
 
                     case "d":
