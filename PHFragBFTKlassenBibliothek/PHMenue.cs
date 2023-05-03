@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Figgle;
 
-namespace MultiTool
+namespace PHFragBFTKlassenBibliothek
 {
-    internal class Hauptmenue
+    public class PHMenue
     {
-        public static void HauptmenueAufruf()
+
+        public static void PHSubmenu()
         {
             bool Exit = false;
 
@@ -19,17 +15,16 @@ namespace MultiTool
                 (int, int) cPosBM = Console.GetCursorPosition();
 
                 Console.WriteLine();
-
+                Console.ForegroundColor = ConsoleColor.Green;
                 //ASCII art Logo wird erzeugt.
-                Console.WriteLine
-                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                Console.WriteLine(FiggleFonts.Slant.Render("BFTMultiTool"));
 
                 //Konsolentitel wird geändert.
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Hauptmenü <<<\n" +
-                                  "------------------------------------------------------------------------------------\n\n");
+                                  "|                              >>> Physik Submenu <<<                              |\n" +
+                                  "------------------------------------------------------------------------------------\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
 
@@ -42,56 +37,47 @@ namespace MultiTool
 
 
                 //Eingabeaufforderung 
-                Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
-                Console.Write("Eingabe: ");
+                Console.WriteLine("Wählen Sie eine der folgenden Physik Unterthemen aus:\n");
+                Console.WriteLine("1. Konverter");
+                Console.WriteLine("2. Schwerkraft-Rechner");
+                Console.WriteLine("3. Aufbau und Strucktur der Materie");
+                Console.WriteLine("4. Berechnung von Volumen");
+                Console.Write("\nEingabe: ");
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
                 {
-                    case "e":
+                    case "1":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+                        Feature6.feature_6();
                         break;
 
-                    case "i":
+                    case "2":
                         Console.Clear();
-                        ITBFTKlassenBibliothek.ITSubMenue.ITSubMenue1();
+                        Feature7.feature_7();
                         break;
 
-                    case "m":
+                    case "3":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
-                        MABFTKlassenBibliothek.MAMenue.MASubMenue();
+                        Feature8.feature_8();
                         break;
 
-                    case "p":
+                    case "4":
                         Console.Clear();
-                        PHFragBFTKlassenBibliothek.PHMenue.PHSubmenu();
+                        Feature9.feature_9();
                         break;
-
-                    case "w":
-                        Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
-                        break;
-
                     case "exit":
                         Exit = true;
                         break;
                     default:
 
                         Console.WriteLine("Ungültige Eingabe");
-                        Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
 
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
-
                         break;
+                        Console.ReadKey();
                 }
 
             } while (!Exit);
