@@ -1,4 +1,4 @@
-﻿
+
 using Figgle;
 
 namespace WIBFTKlassenBibliothek
@@ -50,17 +50,18 @@ namespace WIBFTKlassenBibliothek
                 {
                     case "e":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+                        Feature16.Feature_16();
                         break;
 
                     case "i":
                         Console.Clear();
+                        Feature17.Feature_17();
                         //Hier das Informationstechnikmenü aufrufen
                         break;
 
                     case "m":
                         Console.Clear();
-                        Feature18.Feature_18();
+                        
                         break;
 
                     case "p":
