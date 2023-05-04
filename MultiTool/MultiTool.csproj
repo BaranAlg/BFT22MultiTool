@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ITBFTKlassenBibliothek\ITBFTKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\ITKlassenBibliothek\ITKlassenBibliothek.csproj" />
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
     <ProjectReference Include="..\MABFTKlassenBibliothek\MABFTKlassenBibliothek.csproj" />
     <ProjectReference Include="..\PHFragBFTKlassenBibliothek\PHFragBFTKlassenBibliothek.csproj" />
